@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 start.addEventListener("click", () => {
     dineroText.textContent = "$"+ dinero;
     apuesta=0;
+    dineroApostado.textContent = "$" + apuesta
     GContenedor.style.display = 'none';
     borrar()
     generarCartasJ();
