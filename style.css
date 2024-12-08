@@ -260,7 +260,7 @@ body {
     color: white;
 }
 @media (max-width: 768px) {
-    body{
+    .body{
         display: grid;
     }
     .w-50{
