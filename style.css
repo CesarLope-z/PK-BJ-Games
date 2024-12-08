@@ -1,0 +1,278 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(/imgs/fondo.jpg);
+    /* color: white; */
+    text-align: center;
+    display: flex;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+/*     
+    height: 100vh; */
+    padding: 10px;
+}
+h2{
+    color: white;
+    font-size: xx-large;
+
+}
+
+.p{
+    padding: 3rem;
+}
+.disable{
+    border: 3px solid gray;
+    color: gray;
+}
+.scoreArea{
+    justify-items: center;
+}
+
+.areaDealer, .areaPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 150px;
+}
+.titulo{
+
+    color: white;
+    font-size: xx-large;
+    /* border: 3px solid white;
+    border-radius: 50%;  */
+    padding: 10px;
+
+}
+.Brojo{
+    border: 3px solid red;
+    border-radius: 50%;
+    color: red;
+}
+.Bverde{
+    border: 3px solid greenyellow;
+    border-radius: 50%;
+    color: greenyellow;
+}
+.rojo{
+    border: 3px solid red;
+    color: red;
+}
+.amarillo{
+    border: 3px solid yellow;
+    color: yellow;
+}
+.verde{
+    border: 3px solid greenyellow;
+    color: greenyellow;
+}
+.red, .red>div {
+    color: red;
+}
+.blanco{
+    color: white;
+    border: 3px solid white;
+}
+.m{
+    margin: auto;
+}
+
+.carta{
+    width: 80px;
+    height: 120px;
+
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: moverYGirar 1s ease-in-out forwards;
+}
+
+@keyframes moverYGirar {
+    0% {
+      transform: translateY(40px) rotateY(360deg);
+    }
+    100% {
+      transform: translateY(0px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+.left{
+    text-align: left;
+    padding: 5px;
+}
+.right{
+    text-align: end;
+    padding: 5px;
+}
+
+.carta .numero {
+    font-size: 20px;
+    font-weight: bold;
+}
+.carta .tipo {
+    font-size: 30px;
+}
+
+.cuadro{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: xx-large;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 3px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: xx-large;
+}
+button:hover {
+    background-color: green;
+}
+
+
+
+
+/* poker  */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./imgs/fondo.jpg);
+}
+#cartasMesa{
+    position: relative;
+}
+
+#cartasPlayer{
+    position: absolute;
+    top: 36.5%;
+    width: 50%;
+}
+#cartasRivales{
+
+    perspective: 1000px; /* Necesario para el efecto 3D */
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: absolute;
+    top: 60%;
+    width: 50%;
+}
+
+#cartasPlayer, #cartasMesa {
+    perspective: 1000px; /* Necesario para el efecto 3D */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#rivalUno, #rivalDos{
+    display: flex;
+    gap: 10px;
+}
+
+#opciones{
+    position: absolute;
+    top: 85%;
+    width: 50%;
+}
+
+.cardAnimation{
+    animation: moverYGirar 1s ease-in-out forwards;
+}
+
+.card {
+    width: 80px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+.card.girada {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la cara trasera */
+    align-items: center;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+}
+
+.card-front {
+    background-image: url(./imgs/carta.jpg);
+    background-size: cover;
+    background-position-x: center;
+    color: white;
+}
+
+.card-back {
+    display: grid;
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+.w-50{
+    width: 50%;
+}
+.GContenedor{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    backdrop-filter: blur(10px);
+    width: 50%;
+    height: 80%;
+    align-content: center;
+}
+.textGanador{
+    animation: moverYGirar 1s ease-in-out forwards;
+    font-size: 50px;
+    color: white;
+}
+@media (max-width: 768px) {
+    body{
+        display: grid;
+    }
+    .w-50{
+        width: 100%;
+    }
+    #cartasPlayer, #cartasMesa, #cartasRivales, #opciones{
+        width: 100% !important;
+    }
+    #opciones{
+        position: initial;
+    }
+    .money{
+        margin: 150vw 0;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blackjack </title>
+</head>
+<body class="flex">
+    <div class="table">
+
+
+        <div class="areaDealer" id="areaDealer"></div>
+
+
+        
+
+
+        <div id="scoreArea" class="scoreArea p">
+            <div class="titulo"><p class="m tituloDealer" id="dealerScore">0</p></div>
+            <div class="titulo"><p class="m tituloPlayer" id="playerScore">0</p></div>
+            
+        </div>
+        
+        <div class="areaPlayer" id="areaPlayer"></div>
+
+        <div class="p">
+            <button id="pedir">Pedir Carta</button>
+            <button id="plantarse">Plantarse</button>
+            <button  id="reiniciar">Reiniciar</button>
+        </div>
+
+    </div>
+    <div class="money">
+        <div>
+            <h2>Tu dinero: <span id="dineroText"></span></h2>
+        </div>
+        <div>
+            <button id="uno">+$1</button>
+            <button id="dies">+$10</button>
+            <button id="cien">+$100</button>
+            <button id="mil">+$1000</button>
+        </div>
+        <div>
+            <h2>Tu apuesta: <span></span></h2>
+            <div class="cuadro blanco" id="cuadro">
+                <p id="dineroApostado" >$0</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="BJscript.js"></script>
+</body>
+</html>

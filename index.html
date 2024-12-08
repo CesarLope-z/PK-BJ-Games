@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(./imgs/fondo.jpg); /* Fondo de imagen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            gap: 30px; /* Espaciado entre las fichas */
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo interno transparente */
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease-in-out; /* Animación para el agrandamiento y giro */
+            overflow: hidden; /* Evita que el borde "salga" del círculo */
+        }
+
+        /* Efecto de crecimiento y rotación cuando el mouse pasa sobre la ficha */
+        a:hover {
+            transform: scale(1.5) rotate(360deg); /* Aumenta el tamaño y rota */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo interno transparente */
+        }
+
+        /* Bordes rojo y azul de 5px */
+        a::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        /* Estilo de los enlaces */
+        .poker {
+            border: 15px groove #ff0000; /* Borde rojo */
+            position: relative;
+            left: -50px; /* Mueve a la izquierda */
+        }
+
+        #blackjack {
+            border: 15px ridge #f39c12; /* Borde amarillo */
+            position: relative;
+            left: 50px; /* Mueve a la derecha */
+        }
+
+        #other {
+            border: 15px groove #2ecc71; /* Borde verde */
+            position: relative;
+            left: -50px; /* Mueve a la izquierda */
+        }
+
+        /* Asegura que el texto siempre esté encima */
+        a span {
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="poker.html" class="poker"><span class="poker1">Póker</span></a>
+        <a href="blackjack.html" id="blackjack"><span>Blackjack</span></a>
+        <a href="#" id="other"><span>Otro</span></a> <!-- Puedes cambiar este por otro enlace si lo deseas -->
+    </div>
+</body>
+</html>
