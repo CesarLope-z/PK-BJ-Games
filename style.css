@@ -164,6 +164,7 @@ body {
 }
 #cartasMesa{
     position: relative;
+    flex-wrap: wrap;
 }
 
 #cartasPlayer{
@@ -176,6 +177,7 @@ body {
     perspective: 1000px; /* Necesario para el efecto 3D */
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 10px;
     position: absolute;
     top: 60%;
