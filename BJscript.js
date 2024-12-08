@@ -45,7 +45,6 @@ pedir.addEventListener("click", () => {
     const datos = generarDatos("P");
     const cartaShow = generarCarta(datos);
     areaPlayer.appendChild(cartaShow);
-    ganaPierde(puntajeJugador)
     uno.disabled = true;
     uno.classList.add("disable")
     dies.disabled = true;
@@ -56,6 +55,7 @@ pedir.addEventListener("click", () => {
     mil.classList.add("disable")
     reiniciar.disabled = true;
     reiniciar.classList.add("disable")
+    ganaPierde(puntajeJugador)
 
 })
 
@@ -210,6 +210,8 @@ function ganaPierde(puntos){
         plantarse.classList.add("disable")
         pedir.disabled = true;
         pedir.classList.add("disable")
+        reiniciar.disabled = false;
+        reiniciar.classList.remove("disable")
         dinero = dinero-apuesta
         dineroText.textContent = "" + dinero
     }
