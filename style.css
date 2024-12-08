@@ -275,4 +275,12 @@ body {
     .money{
         margin: 150vw 0;
     }
+    .GContenedor{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 75%;
+        height: 0;
+        left: 0;
+    }
 }
